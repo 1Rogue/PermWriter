@@ -14,36 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.rogue.permwriter.gui;
+package com.rogue.permwriter.yaml;
 
-import com.rogue.permwriter.PermWriter;
-import java.awt.GridBagLayout;
-import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 /**
- * An instantiable GUI window for {@link PermWriter}
  *
- * @since 1.0.0
+ * @since
  * @author 1Rogue
- * @version 1.0.0
+ * @version
  */
-public class PWWindow extends JFrame {
-
-    private PermWriter project;
-
-    /**
-     * Initializes the GUI window
-     *
-     * @since 1.0.0
-     * @version 1.0.0
-     *
-     * @param project The {@link PermWriter} instance
-     */
-    public PWWindow(PermWriter project) {
-        this.project = project;
-        this.setTitle("PermWriter");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.getContentPane().setLayout(new GridBagLayout());
-        this.setSize(750, 475);
+public class YAML {
+    
+    private final Iterable<String> headers;
+    private JTextArea yamlArea;
+    
+    public YAML(Iterable<String> headers) {
+        this.headers = headers;
     }
+
 }
